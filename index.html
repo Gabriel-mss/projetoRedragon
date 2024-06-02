@@ -87,18 +87,4 @@
     </body>
 </html>
 
-# Dividir os dados em conjunto de treinamento e conjunto de teste
-from sklearn.model_selection import train_test_split
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
-
-# Treinar um modelo de regressão linear
-model = LinearRegression()
-model.fit(X_train, y_train)
-
-# Fazer previsões no conjunto de teste
-y_pred = model.predict(X_test)
-
-# Calcular o MSE
-mse = mean_squared_error(y_test, y_pred)
-print("MSE:", mse)
